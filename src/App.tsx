@@ -9,7 +9,7 @@ function App() {
   const {
     board,
     xPlaying,
-    scores,
+    // scores,
     gameOver,
     activeMiniBoard,
     miniBoardStatus,
