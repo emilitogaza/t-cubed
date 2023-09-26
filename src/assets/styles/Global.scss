@@ -14,3 +14,7 @@ $TypeFamily: "Space Mono", monospace;
 //Strokes
 $BaseStrokeWidth: 1px;
 $IconStrokeWidth: 1px;
+
+$borderColor: $PlayerXBase .border {
+  outline: $borderColor;
+}
