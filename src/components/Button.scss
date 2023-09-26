@@ -1,0 +1,68 @@
+@import "../assets/styles/global.scss";
+
+@mixin hoverActiveStyles($color) {
+  &:hover {
+    color: rgba($color, 72%);
+    background-color: rgba($color, 8%);
+    transform: scale(1.04);
+  }
+
+  &:active {
+    color: rgba($color, 80%);
+    background-color: rgba($color, 16%);
+    transform: scale(1.02);
+  }
+}
+
+.btn-component {
+  font-family: $TypeFamily;
+  font-size: 1.16rem;
+  font-weight: 800;
+  border: solid 0.1rem #1f1f1f;
+  background-color: rgba($PlayerXBase, 0%);
+  border-radius: 0.5rem;
+  padding: 0rem 2rem;
+  height: 4rem;
+  transition: all 256ms ease;
+  cursor: pointer;
+
+  &.variant-one {
+    color: rgba(#fff, 48%);
+    background-color: rgba(#fff, 2%);
+    border: solid 3px rgba(#fff, 8%);
+
+    @include hoverActiveStyles(#fff);
+  }
+
+  @each $team, $color in (x: $PlayerXBase, o: $PlayerOBase) {
+    &.team-#{$team} {
+      color: rgba($color, 88%);
+      background-color: rgba($color, 8%);
+      border: solid 3px rgba($color, 24%);
+
+      &:hover {
+        color: rgba($color, 96%);
+        background-color: rgba($color, 16%);
+        border: solid 3px rgba($color, 28%);
+        transform: scale(1.04);
+      }
+
+      &:active {
+        color: rgba($color, 100%);
+        background-color: rgba($color, 24%);
+        border: solid 3px rgba($color, 32%);
+        transform: scale(1.02);
+      }
+    }
+  }
+
+  &.primary {
+    background-color: rgb(230, 2, 255);
+    color: white;
+  }
+
+  &.danger {
+    background-color: red;
+    color: white;
+  }
+}

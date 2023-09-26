@@ -1,0 +1,63 @@
+@import "../assets/styles/global.scss";
+
+.box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  border-radius: 5px;
+  height: 72px;
+  width: 72px;
+  padding: 0px;
+  background-color: $PlayerXLight;
+  transition: all 256ms ease;
+}
+
+.icon-wrapper {
+  width: 100%;
+  height: 100%;
+  padding: 12px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  stroke-width: $IconStrokeWidth;
+}
+
+// Player styles
+.o {
+  color: $PlayerODark;
+  background-color: $PlayerOBase;
+}
+.x {
+  color: $PlayerXDark;
+  background-color: $PlayerXBase;
+}
+
+//Hover effect when X is next to play and box hasn't been clicked
+.box.o-hover.active:not(.x):not(.o):hover {
+  background-color: lighten($PlayerOLight, 10%);
+  color: rgba($PlayerOBase, 0.56);
+}
+
+// Hover effect when O is next to play and box hasn't been clicked
+.box.x-hover.active:not(.x):not(.o):hover {
+  background-color: lighten($PlayerXLight, 10%);
+  color: rgba($PlayerXBase, 0.56);
+}
+
+.box-win-x {
+  background-color: $PlayerXBase;
+}
+
+.box-win-o {
+  background-color: $PlayerOBase;
+}
+
+// Change style when its different players turn
+.box.x-turn {
+  background-color: $PlayerXLight;
+}
+
+.box.o-turn {
+  background-color: $PlayerOLight;
+}

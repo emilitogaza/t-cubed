@@ -1,0 +1,71 @@
+@import "./assets/styles/global.scss";
+* {
+  box-sizing: border-box;
+  transition: all 512ms ease;
+  font-family: $TypeFamily;
+}
+
+body {
+  margin: 0;
+  background-color: #0b0f0e;
+}
+
+.bg-x {
+  background-color: lighten($PlayerXDark, 2%);
+}
+
+.bg-o {
+  background-color: lighten($PlayerODark, 2%);
+}
+
+.app {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 100vw;
+  height: 100vh;
+}
+
+.logo {
+  height: 72px;
+  width: 72px;
+  margin-top: 2rem;
+  margin-bottom: 64px;
+}
+
+.btn-container {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  margin-top: 4rem;
+}
+
+.game-over-modal {
+  width: 100%;
+  height: 100%;
+  background-color: rgba($PlayerXDark, 64%);
+  z-index: 1;
+  position: absolute;
+  padding: 32px;
+  top: 0;
+  left: 0;
+  color: orange;
+  align-items: center;
+  justify-content: center;
+  font-size: 3rem;
+  text-align: center;
+  vertical-align: middle;
+  backdrop-filter: blur(40px);
+  font-size: 6rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.o-winner {
+  color: $PlayerOBase;
+}
+
+.x-winner {
+  color: $PlayerXBase;
+}

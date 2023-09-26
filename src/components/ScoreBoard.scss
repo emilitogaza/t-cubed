@@ -1,0 +1,38 @@
+@import "../assets/styles/global.scss";
+
+.score-board {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+  font-size: 1.6rem;
+  margin: 2rem;
+  border-radius: 0rem;
+  overflow: hidden;
+  gap: 1rem;
+}
+
+.score {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding: 1rem 2rem;
+  text-align: center;
+  font-weight: 800;
+  border-radius: 1rem;
+  overflow: hidden;
+}
+
+.x-score {
+  color: $PlayerOBase;
+  background-color: $PlayerOLight;
+}
+
+.o-score {
+  color: $PlayerXBase;
+  background-color: $PlayerXLight;
+}
+
+.title {
+  font-size: 1rem;
+}
