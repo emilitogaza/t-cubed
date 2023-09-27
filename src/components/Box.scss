@@ -8,6 +8,8 @@
   border-radius: 5px;
   height: 72px;
   width: 72px;
+  max-width: min(10vw, 7vh);
+  max-height: min(10vw, 7vh);
   padding: 0px;
   background-color: $PlayerXLight;
   transition: all 256ms ease;
