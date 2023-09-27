@@ -63,3 +63,9 @@
 .box.o-turn {
   background-color: $PlayerOLight;
 }
+
+@media (max-width: 600px) {
+  .box {
+    border-radius: 4px;
+  }
+}

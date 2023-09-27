@@ -26,7 +26,7 @@ body {
   flex-direction: column;
   width: 100vw;
   height: 100vh;
-  padding: 32px 32px;
+  padding: 32px 32px 48px 32px;
 }
 
 .logo {
@@ -73,13 +73,13 @@ body {
 
 @media (max-width: 600px) {
   .app {
-    padding: 32px 8px;
+    padding: 16px 8px 48px 8px;
   }
 
   .logo {
-    height: 56px;
-    width: 56px;
-    margin-bottom: 32px;
+    height: 64px;
+    width: 64px;
+    margin-bottom: 56px;
   }
 
   .btn-container {

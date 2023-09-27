@@ -66,3 +66,11 @@
     color: white;
   }
 }
+
+@media (max-width: 600px) {
+  .btn-component {
+    font-size: 1rem;
+    height: 3.5rem;
+    padding: 0rem 1.5rem;
+  }
+}
