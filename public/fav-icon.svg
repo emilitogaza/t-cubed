@@ -1,7 +1,7 @@
 <svg width="700" height="700" viewBox="0 0 700 700" fill="none" xmlns="http://www.w3.org/2000/svg">
 <g clip-path="url(#clip0_1449_1323)">
-<rect width="700" height="700" rx="160" fill="url(#paint0_linear_1449_1323)"/>
-<rect width="700" height="700" rx="160" fill="black" fill-opacity="0.4"/>
+<rect width="700" height="700" fill="url(#paint0_linear_1449_1323)"/>
+<rect width="700" height="700" fill="black" fill-opacity="0.4"/>
 <g filter="url(#filter0_d_1449_1323)">
 <path fill-rule="evenodd" clip-rule="evenodd" d="M565.989 117.993C570.39 117.993 573.949 121.606 573.711 126C570.76 180.566 547.867 232.19 509.328 270.729C470.79 309.268 419.517 331.81 365.581 334.132C361.222 334.319 357.667 330.775 357.667 326.411V125.86C357.667 121.515 361.189 117.993 365.533 117.993H565.989Z" fill="url(#paint1_linear_1449_1323)"/>
 <path d="M210.167 334.327C269.906 334.327 318.333 285.899 318.333 226.16C318.333 166.421 269.906 117.993 210.167 117.993C150.428 117.993 102 166.421 102 226.16C102 285.899 150.428 334.327 210.167 334.327Z" fill="url(#paint2_linear_1449_1323)"/>
@@ -36,7 +36,7 @@
 <stop offset="1" stop-color="#C3B0FF"/>
 </linearGradient>
 <clipPath id="clip0_1449_1323">
-<rect width="700" height="700" rx="160" fill="white"/>
+<rect width="700" height="700" fill="white"/>
 </clipPath>
 </defs>
 </svg>
