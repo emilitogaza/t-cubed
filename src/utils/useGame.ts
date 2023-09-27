@@ -35,7 +35,7 @@ export const useGame = () => {
 
   // Logic for clicking on a box: don't allow click if mini board is won, and don't allow click if the game is over or is already clicked
   const handleBoxClick = (boardIdx: number, boxIdx: number) => {
-    // Check for conditions where the click is invalid
+    // Check for conditions if the click is invalid
     if (
       miniBoardStatus[boardIdx] !== null ||
       gameOver ||
@@ -55,7 +55,6 @@ export const useGame = () => {
     );
 
     // Update the state of the entire board
-    // Disabled temporary: const updatedBoard = [...board];
     const updatedBoard = JSON.parse(JSON.stringify(board));
     updatedBoard[boardIdx] = updatedMiniBoard;
     setBoard(updatedBoard);

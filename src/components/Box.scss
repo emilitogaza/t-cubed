@@ -8,8 +8,8 @@
   border-radius: 5px;
   height: 72px;
   width: 72px;
-  max-width: min(10vw, 7vh);
-  max-height: min(10vw, 7vh);
+  max-width: min(10vw, 6vh);
+  max-height: min(10vw, 6vh);
   padding: 0px;
   background-color: $PlayerXLight;
   transition: all 256ms ease;
@@ -57,11 +57,11 @@
 
 // Change style when its different players turn
 .box.x-turn {
-  background-color: $PlayerXLight;
+  background-color: lighten($PlayerXLight, 4%);
 }
 
 .box.o-turn {
-  background-color: $PlayerOLight;
+  background-color: lighten($PlayerOLight, 4%);
 }
 
 @media (max-width: 740px) {
