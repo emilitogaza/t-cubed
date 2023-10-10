@@ -1,0 +1,28 @@
+{
+  "name": "T Cubed",
+  "short_name": "T Cubed",
+  "description": "Try this super wow interesting game. T-cubed is the ultimate tic tac toe game.",
+  "lang": "sv",
+  "icons": [
+    {
+      "src": "/icons/android-chrome-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/icons/android-chrome-384x384.png",
+      "sizes": "384x384",
+      "type": "image/png"
+    },
+    {
+      "src": "/icons/icon-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ],
+  "theme_color": "#463c52",
+  "background_color": "#463c52",
+  "start_url": "/",
+  "display": "standalone",
+  "orientation": "portrait"
+}

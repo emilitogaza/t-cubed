@@ -7,8 +7,6 @@
   row-gap: 6px;
   place-items: center;
   justify-content: center;
-  overflow: hidden;
-  border-radius: 32px;
 }
 
 .mini-board {
@@ -19,32 +17,60 @@
   row-gap: 2px;
   place-items: center;
   justify-content: center;
-  border-radius: 12px;
+  border-radius: 8px;
   overflow: hidden;
 
   &.active {
     opacity: 1;
+    transform: scale(1.005);
   }
   &.inactive {
     opacity: 0.32;
+    transform: scale(0.995);
   }
 
   &.completed {
     opacity: 1;
+    transition: all 2440ms ease;
   }
   &.completed-dimmed {
     opacity: 0.64;
   }
 }
 
+.border-0 {
+  border-radius: 24px 8px 8px 8px;
+}
+.border-2 {
+  border-radius: 8px 24px 8px 8px;
+}
+.border-8 {
+  border-radius: 8px 8px 24px 8px;
+}
+.border-6 {
+  border-radius: 8px 8px 8px 24px;
+}
+
 @media (max-width: 740px) {
   .board {
-    grid-gap: 3px;
-    border-radius: 16px;
+    grid-gap: 4px;
   }
 
   .mini-board {
-    grid-gap: 1px;
-    border-radius: 8px;
+    grid-gap: 1.4px;
+    border-radius: 6px;
+  }
+
+  .border-0 {
+    border-radius: 16px 6px 6px 6px;
+  }
+  .border-2 {
+    border-radius: 6px 16px 6px 6px;
+  }
+  .border-8 {
+    border-radius: 6px 6px 16px 6px;
+  }
+  .border-6 {
+    border-radius: 6px 6px 6px 16px;
   }
 }

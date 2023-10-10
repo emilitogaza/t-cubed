@@ -17,13 +17,28 @@ export const Board: React.FC<BoardProps> = ({
   activeMiniBoard,
   miniBoardStatus,
 }) => {
+  const getSpecialClass = (idx: number): string => {
+    switch (idx) {
+      case 0:
+        return "border-0";
+      case 2:
+        return "border-2";
+      case 6:
+        return "border-6";
+      case 8:
+        return "border-8";
+      default:
+        return "";
+    }
+  };
+
   return (
     <div className="board">
       {board.map((miniBoard, boardIdx) => {
         return (
           <div
             key={boardIdx}
-            className={`mini-board ${
+            className={`mini-board ${getSpecialClass(boardIdx)} ${
               activeMiniBoard === boardIdx && miniBoardStatus[boardIdx] === null
                 ? "active"
                 : ""
