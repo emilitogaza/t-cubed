@@ -1,6 +1,6 @@
 import { useGame } from "./utils/useGame";
 import "./App.scss";
-import KumpanLogo from "./assets/icons/KumpanLogo";
+import Logo from "./assets/icons/Logo";
 import { Board } from "./components/Board";
 // import { ScoreBoard } from "./components/ScoreBoard";
 import { Button } from "./components/Button";
@@ -35,7 +35,7 @@ function App() {
           </Button>
         </div>
       )}
-      <KumpanLogo className="logo" color={xPlaying ? "#383140" : "#3b4846"} />{" "}
+      <Logo className="logo" color={xPlaying ? "#383140" : "#3b4846"} />{" "}
       <Board
         board={board}
         onClick={(boardIdx, boxIdx) => handleBoxClick(boardIdx, boxIdx)}
