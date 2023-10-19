@@ -1,0 +1,38 @@
+@import "../assets/styles/Global.scss";
+
+.countdown-timer {
+  display: flex;
+  height: 4rem;
+  width: 6rem;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-size: 1.12rem;
+  font-weight: 400;
+
+  &.countdown-x-playing {
+    color: rgba($PlayerXLight, 88%);
+    background-color: lighten($PlayerXDark, 0%);
+
+    &.active {
+      // Override for X player when active
+      border: solid 2px rgba($PlayerXBase, 88%);
+      color: lighten($PlayerXLight, 40%);
+      background-color: $PlayerXDark;
+      border-radius: 0.75rem 0.4rem 0.4rem 0.75rem;
+    }
+  }
+
+  &.countdown-o-playing {
+    color: rgba($PlayerOLight, 88%);
+    background-color: lighten($PlayerODark, 0%);
+
+    &.active {
+      // Override for O player when active
+      color: lighten($PlayerOLight, 40%);
+      border: solid 2px rgba($PlayerOBase, 88%);
+      background-color: $PlayerODark;
+      border-radius: 0.4rem 0.75rem 0.75rem 0.4rem;
+    }
+  }
+}
