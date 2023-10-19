@@ -13,6 +13,7 @@ function App() {
   const {
     board,
     xPlaying,
+    // Not used for the moment
     // scores,
     // activePlayer,
     // timerEnabled,
