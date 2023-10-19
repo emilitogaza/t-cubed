@@ -13,7 +13,7 @@ function App() {
   const {
     board,
     xPlaying,
-    // Not used for the moment
+    // Not used for the moment, maybe will in future
     // scores,
     // activePlayer,
     // timerEnabled,
