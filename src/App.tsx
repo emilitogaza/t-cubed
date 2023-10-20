@@ -53,16 +53,18 @@ function App() {
           </Button>
         </div>
       )}
-      <Logo className={`logo ${xPlaying ? "logo-x" : "logo-o"}`} />
-      {timerSetting !== "off" && (
-        <TimerDisplay
-          playerXTimer={playerXTimer}
-          playerOTimer={playerOTimer}
-          xPlaying={xPlaying}
-          isPaused={isPaused}
-          togglePause={togglePause}
-        />
-      )}
+      <div className="header">
+        <Logo className={`logo ${xPlaying ? "logo-x" : "logo-o"}`} />
+        {timerSetting !== "off" && (
+          <TimerDisplay
+            playerXTimer={playerXTimer}
+            playerOTimer={playerOTimer}
+            xPlaying={xPlaying}
+            isPaused={isPaused}
+            togglePause={togglePause}
+          />
+        )}
+      </div>
       <Board
         board={board}
         onClick={(boardIdx, boxIdx) => handleBoxClick(boardIdx, boxIdx)}
@@ -70,50 +72,52 @@ function App() {
         activeMiniBoard={activeMiniBoard}
         miniBoardStatus={miniBoardStatus}
       />
-      <div
-        className={`btn-container tool-bar ${
-          xPlaying ? "x-playing" : "o-playing"
-        }`}
-      >
-        <Button
-          variant={`variant-one left ${
-            xPlaying ? "btn-x-playing" : "btn-o-playing"
+      <div className="footer">
+        <div
+          className={`btn-container tool-bar ${
+            xPlaying ? "x-playing" : "o-playing"
           }`}
         >
-          {" "}
-          <OnlineIcon className="btn-icon"></OnlineIcon>
-          Online
-        </Button>
-        <Button
-          variant={`variant-one  ${
-            xPlaying ? "btn-x-playing" : "btn-o-playing"
-          }`}
-          onClick={() => {
-            resetBoard();
-            resetTimers(timerSetting);
-          }}
-        >
-          <ResetIcon className="btn-icon"></ResetIcon>
-          Reset
-        </Button>
-        <Button
-          variant={`variant-one ${
-            xPlaying ? "btn-x-playing" : "btn-o-playing"
-          } ${timerSetting === "4min" ? "btn-active" : ""}`}
-          onClick={() => handleTimerSelection("4min")}
-        >
-          <TimeFourIcon className="btn-icon"></TimeFourIcon>
-          Timer
-        </Button>
-        <Button
-          variant={`variant-one right ${
-            xPlaying ? "btn-x-playing" : "btn-o-playing"
-          } ${timerSetting === "8min" ? "btn-active" : ""}`}
-          onClick={() => handleTimerSelection("8min")}
-        >
-          <TimeEightIcon className="btn-icon"></TimeEightIcon>
-          Timer
-        </Button>
+          <Button
+            variant={`variant-one left ${
+              xPlaying ? "btn-x-playing" : "btn-o-playing"
+            }`}
+          >
+            {" "}
+            <OnlineIcon className="btn-icon"></OnlineIcon>
+            Online
+          </Button>
+          <Button
+            variant={`variant-one  ${
+              xPlaying ? "btn-x-playing" : "btn-o-playing"
+            }`}
+            onClick={() => {
+              resetBoard();
+              resetTimers(timerSetting);
+            }}
+          >
+            <ResetIcon className="btn-icon"></ResetIcon>
+            Reset
+          </Button>
+          <Button
+            variant={`variant-one ${
+              xPlaying ? "btn-x-playing" : "btn-o-playing"
+            } ${timerSetting === "4min" ? "btn-active" : ""}`}
+            onClick={() => handleTimerSelection("4min")}
+          >
+            <TimeFourIcon className="btn-icon"></TimeFourIcon>
+            Timer
+          </Button>
+          <Button
+            variant={`variant-one right ${
+              xPlaying ? "btn-x-playing" : "btn-o-playing"
+            } ${timerSetting === "8min" ? "btn-active" : ""}`}
+            onClick={() => handleTimerSelection("8min")}
+          >
+            <TimeEightIcon className="btn-icon"></TimeEightIcon>
+            Timer
+          </Button>
+        </div>
       </div>
     </div>
   );

@@ -159,3 +159,11 @@
 .right {
   border-radius: 0.25rem 0.75rem 0.75rem 0.25rem;
 }
+
+@media (max-width: 740px) {
+  .btn-container {
+    &.tool-bar {
+      width: 100%;
+    }
+  }
+}
