@@ -1,4 +1,3 @@
-import { useState, useEffect } from "react";
 import { useGame } from "./utils/useGame";
 import "./App.scss";
 import Logo from "./assets/icons/Logo";
