@@ -1,3 +1,4 @@
+import { useState, useEffect } from "react";
 import { useGame } from "./utils/useGame";
 import "./App.scss";
 import Logo from "./assets/icons/Logo";
@@ -13,7 +14,7 @@ function App() {
   const {
     board,
     xPlaying,
-    // Not used for the moment, maybe will in future
+    // These are not used for the moment, maybe will in future
     // scores,
     // activePlayer,
     // timerEnabled,
@@ -54,16 +55,19 @@ function App() {
         </div>
       )}
       <div className="header">
-        <Logo className={`logo ${xPlaying ? "logo-x" : "logo-o"}`} />
-        {timerSetting !== "off" && (
-          <TimerDisplay
-            playerXTimer={playerXTimer}
-            playerOTimer={playerOTimer}
-            xPlaying={xPlaying}
-            isPaused={isPaused}
-            togglePause={togglePause}
-          />
-        )}
+        <Logo
+          className={`logo ${xPlaying ? "logo-x" : "logo-o"} ${
+            timerSetting !== "off" ? "logo-timer-active" : ""
+          }`}
+        />
+        <TimerDisplay
+          className={`timer-fade-in ${timerSetting !== "off" ? "active" : ""}`}
+          playerXTimer={playerXTimer}
+          playerOTimer={playerOTimer}
+          xPlaying={xPlaying}
+          isPaused={isPaused}
+          togglePause={togglePause}
+        />
       </div>
       <Board
         board={board}

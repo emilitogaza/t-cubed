@@ -4,6 +4,7 @@ import "./TimerDisplay.scss";
 import "./Button.scss";
 
 interface Props {
+  className?: string;
   playerXTimer: number;
   playerOTimer: number;
   xPlaying: boolean;
@@ -17,6 +18,7 @@ const TimerDisplay: React.FC<Props> = ({
   isPaused,
   togglePause,
   xPlaying,
+  className,
 }) => {
   const formatTime = (timeInSeconds: number): string => {
     const minutes = Math.floor(timeInSeconds / 60);
@@ -25,7 +27,11 @@ const TimerDisplay: React.FC<Props> = ({
   };
 
   return (
-    <div className={`btn-container ${xPlaying ? "x-playing" : "o-playing"}`}>
+    <div
+      className={`btn-container ${
+        xPlaying ? "x-playing" : "o-playing"
+      } ${className}`}
+    >
       <div
         className={`countdown-timer left ${
           xPlaying ? "countdown-x-playing active" : "countdown-o-playing"

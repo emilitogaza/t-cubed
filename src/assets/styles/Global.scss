@@ -10,9 +10,15 @@ $PlayerODark: #0b0f0e;
 
 //Typography
 $TypeFamily: "Space Grotesk", monospace;
+@font-face {
+  font-family: "Space Grotesk";
+  src: url("/src/assets/fonts/SpaceGrotesk-VariableFont_wght.ttf")
+    format("truetype");
+  font-weight: 500;
+  font-style: normal;
+}
 
 //Strokes
 $BaseStrokeWidth: 1px;
 $IconStrokeWidth: 1px;
-
 $borderColor: $PlayerXBase;

@@ -30,11 +30,11 @@ body {
 }
 
 .logo {
-  height: 6rem;
-  width: 6rem;
-  margin-top: 1rem;
-  margin-bottom: 1rem;
-  transition: all 56ms ease;
+  height: 5rem;
+  width: 5rem;
+  margin-top: 3rem;
+  margin-bottom: -1.5rem;
+  transition: margin 512ms ease, width 512ms ease, height 512ms ease;
 
   &.logo-x {
     color: $PlayerXLight;
@@ -42,6 +42,13 @@ body {
 
   &.logo-o {
     color: $PlayerOLight;
+  }
+
+  &.logo-timer-active {
+    height: 4rem;
+    width: 4rem;
+    margin-top: 1rem;
+    margin-bottom: 0.5rem;
   }
 }
 
@@ -51,7 +58,6 @@ body {
   right: 0%;
   left: 0%;
   top: 0%;
-  padding-top: 3rem;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -65,7 +71,7 @@ body {
   left: 0%;
   bottom: 0%;
   width: 100%;
-  padding: 1rem;
+  padding: 1rem 1rem 3rem 1rem;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -98,23 +104,40 @@ body {
   color: $PlayerXBase;
 }
 
+.timer-fade-in {
+  opacity: 0;
+  visibility: hidden;
+  transition: all 512ms ease;
+
+  &.active {
+    opacity: 1;
+    visibility: visible;
+  }
+}
+
 @media (max-width: 704px) {
   .app {
-    padding: 16px 8px 48px 8px;
-  }
-
-  .header {
-    padding-top: 2rem;
+    padding: 1rem 0.5rem 1.5rem 0.5rem;
   }
 
   .logo {
-    height: 4rem;
-    width: 4rem;
-    margin-bottom: 1rem;
+    height: 4.5rem;
+    width: 4.5rem;
+
+    &.logo-timer-active {
+      height: 3rem;
+      width: 3rem;
+      margin-top: 1rem;
+      margin-bottom: 0.5rem;
+    }
   }
 
   .game-over-modal {
     font-size: 3rem;
     padding: 16px;
+  }
+
+  .footer {
+    padding: 1rem;
   }
 }
