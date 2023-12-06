@@ -1,4 +1,5 @@
 import { useGame } from "./utils/useGame";
+import { useEffect } from "react";
 import "./App.scss";
 import Logo from "./assets/icons/Logo";
 import OnlineIcon from "./assets/icons/OnlineIcon";
@@ -32,6 +33,19 @@ function App() {
     togglePause,
     resetTimers,
   } = useGame();
+
+  useEffect(() => {
+    // Function to update the browser's theme color
+    const updateThemeColor = () => {
+      const themeColorMeta = document.querySelector('meta[name="theme-color"]');
+      if (themeColorMeta) {
+        const themeColor = xPlaying ? "#18141B" : "#151B19";
+        themeColorMeta.setAttribute("content", themeColor);
+      }
+    };
+
+    updateThemeColor();
+  }, [xPlaying]);
 
   return (
     <div className={`app ${xPlaying ? "bg-x" : "bg-o"}`}>
